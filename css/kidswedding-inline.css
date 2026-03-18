@@ -1518,7 +1518,7 @@ li {
 #rec1432877881 .tn-elem[data-elem-id="1759740347570"] .tn-atom {
   vertical-align: middle;
   color: #494057;
-  font-size: 16px;
+  font-size: 20px;
   font-family: "Montserrat", Arial, sans-serif;
   line-height: 1;
   font-weight: 600;
@@ -1563,7 +1563,7 @@ li {
   }
   #rec1432877881 .tn-elem[data-elem-id="1759740347570"] .tn-atom {
     color: #ffffff;
-    font-size: 16px;
+    font-size: 20px;
     background-size: cover;
   }
 }
@@ -3734,10 +3734,6 @@ html {
     background-size: cover;
   }
 }
-#anketa {
-  height: 550px !important;
-}
-
 #rec1385503291 .tn-elem[data-elem-id="175950505174349250"] {
   z-index: 3;
   top: 80px;
@@ -4104,7 +4100,7 @@ html {
 
 #rec1392709671 .tn-elem[data-elem-id="1765095633551"] .tn-atom {
   font-size: 12px;
-  color: #807394;
+  color: #514169;
   text-align: center;
   transform: rotate(-15deg);
   transform-origin: center center;
