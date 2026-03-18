@@ -4315,6 +4315,120 @@ html { -webkit-text-size-adjust: 100%; }
   transform-origin: center center;
 }
 
+/* === Обратный отсчёт до свадьбы (между Таймингом и Пожеланиями) === */
+.wedding-countdown {
+  color: $text-cream;
+  background: $bg-olive;
+}
+
+.wedding-countdown__inner {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 72px 20px;
+  text-align: center;
+}
+
+.wedding-countdown__title {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto 18px;
+}
+
+.wedding-countdown__title-main {
+  font-weight: 600;
+  line-height: 1.05;
+  color: $text-cream;
+  font-size: 36px;
+}
+
+
+.wedding-countdown__heart {
+  width: 44px;
+  height: 40px;
+  margin: 18px auto 18px;
+  opacity: 0.9;
+}
+
+.wedding-countdown__heart svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.wedding-countdown__heart path {
+  fill: none;
+  stroke: $text-cream;
+  stroke-width: 1.8;
+}
+
+.wedding-countdown__subtitle {
+  font-weight: 300;
+  font-size: clamp(18px, 3.2vw, 26px);
+  line-height: 1.25;
+  margin: 0 0 26px;
+  color: $text-cream;
+}
+
+.wedding-countdown__timer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  align-items: start;
+  justify-items: center;
+  margin: 0 auto;
+  max-width: 720px;
+  position: relative;
+}
+
+.wedding-countdown__item {
+  position: relative;
+  padding: 0 12px;
+  min-width: 0;
+}
+
+.wedding-countdown__item:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  right: -6px;
+  top: 6px;
+  font-size: clamp(44px, 9vw, 78px);
+  line-height: 1;
+  opacity: 0.65;
+  color: $text-cream;
+}
+
+.wedding-countdown__value {
+  font-weight: 300;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+  font-size: clamp(44px, 10vw, 86px);
+  line-height: 1;
+  color: $text-cream;
+}
+
+.wedding-countdown__label {
+  margin-top: 10px;
+  font-weight: 300;
+  font-size: clamp(14px, 3.2vw, 22px);
+  line-height: 1.1;
+  color: $text-cream;
+}
+
+@media screen and (max-width: 479px) {
+  .wedding-countdown__inner {
+    padding: 58px 14px;
+  }
+
+  .wedding-countdown__item {
+    padding: 0 8px;
+  }
+
+  .wedding-countdown__item:not(:last-child)::after {
+    right: -4px;
+    top: 4px;
+  }
+}
+
 /* === INLINE STYLE BLOCK 13 === */
 #rec1392735971 .t396__artboard  {
   height: 597px;

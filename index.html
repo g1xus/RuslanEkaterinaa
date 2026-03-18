@@ -435,6 +435,41 @@
       <!-- /T396 -->
     </div>
 
+    <div id="recWeddingCountdown" class="r t-rec wedding-countdown" style="background-color:#b27595;" data-animationappear="off">
+      <div class="wedding-countdown__inner">
+        <div class="wedding-countdown__title" aria-label="Дата свадьбы">
+          <div class="wedding-countdown__title-main">Дата свадьбы</div>
+        </div>
+
+        <div class="wedding-countdown__heart" aria-hidden="true">
+          <svg viewBox="0 0 39.1 36" xmlns="http://www.w3.org/2000/svg" role="img" focusable="false">
+            <path d="M4.01 1.06C14.14 -3.45 18.95 7.48 20.09 13.51C23.02 7.51 30.56 -3.06 37.28 2.61C44.01 8.28 28.89 28.39 18.34 35.86C12.15 30.32 -8.65 6.7 4.01 1.06Z"/>
+          </svg>
+        </div>
+
+        <div class="wedding-countdown__subtitle">До свадьбы осталось</div>
+
+        <div class="wedding-countdown__timer" data-wedding-date="2026-04-25T00:00:00+03:00" aria-label="Обратный отсчёт до свадьбы">
+          <div class="wedding-countdown__item">
+            <div class="wedding-countdown__value" data-unit="days">0</div>
+            <div class="wedding-countdown__label">дней</div>
+          </div>
+          <div class="wedding-countdown__item">
+            <div class="wedding-countdown__value" data-unit="hours">0</div>
+            <div class="wedding-countdown__label">часов</div>
+          </div>
+          <div class="wedding-countdown__item">
+            <div class="wedding-countdown__value" data-unit="minutes">0</div>
+            <div class="wedding-countdown__label">минут</div>
+          </div>
+          <div class="wedding-countdown__item">
+            <div class="wedding-countdown__value" data-unit="seconds">0</div>
+            <div class="wedding-countdown__label">секунд</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="rec1392709671" class="r t-rec t-screenmax-640px" style=" " data-animationappear="off" data-record-type="396" data-screen-max="640px">
       <!-- T396 -->
       <div class='t396'>
@@ -748,6 +783,73 @@
         initGoogleSheetFormSync();
         setTimeout(initGoogleSheetFormSync, 1500);
       });
+    })();
+  </script>
+
+  <script>
+    (function() {
+      function pad2(n) {
+        return String(n).padStart(2, '0');
+      }
+
+      function pluralRu(n, one, few, many) {
+        var mod10 = n % 10;
+        var mod100 = n % 100;
+        if (mod10 === 1 && mod100 !== 11) return one;
+        if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return few;
+        return many;
+      }
+
+      function initWeddingCountdown() {
+        var timer = document.querySelector('#recWeddingCountdown .wedding-countdown__timer');
+        if (!timer || timer.__inited) return;
+        timer.__inited = true;
+
+        var dateStr = timer.getAttribute('data-wedding-date');
+        var target = dateStr ? new Date(dateStr) : null;
+        if (!target || isNaN(target.getTime())) return;
+
+        var els = {
+          days: timer.querySelector('[data-unit="days"]'),
+          hours: timer.querySelector('[data-unit="hours"]'),
+          minutes: timer.querySelector('[data-unit="minutes"]'),
+          seconds: timer.querySelector('[data-unit="seconds"]')
+        };
+        var labels = timer.querySelectorAll('.wedding-countdown__label');
+
+        function tick() {
+          var now = new Date();
+          var diffMs = target.getTime() - now.getTime();
+          if (diffMs < 0) diffMs = 0;
+
+          var totalSeconds = Math.floor(diffMs / 1000);
+          var days = Math.floor(totalSeconds / 86400);
+          var hours = Math.floor((totalSeconds % 86400) / 3600);
+          var minutes = Math.floor((totalSeconds % 3600) / 60);
+          var seconds = totalSeconds % 60;
+
+          if (els.days) els.days.textContent = String(days);
+          if (els.hours) els.hours.textContent = pad2(hours);
+          if (els.minutes) els.minutes.textContent = pad2(minutes);
+          if (els.seconds) els.seconds.textContent = pad2(seconds);
+
+          if (labels && labels.length >= 4) {
+            labels[0].textContent = pluralRu(days, 'день', 'дня', 'дней');
+            labels[1].textContent = pluralRu(hours, 'час', 'часа', 'часов');
+            labels[2].textContent = pluralRu(minutes, 'минута', 'минуты', 'минут');
+            labels[3].textContent = pluralRu(seconds, 'секунда', 'секунды', 'секунд');
+          }
+        }
+
+        tick();
+        setInterval(tick, 1000);
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initWeddingCountdown);
+      } else {
+        initWeddingCountdown();
+      }
     })();
   </script>
 
