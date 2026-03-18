@@ -1,0 +1,11 @@
+{
+  "name": "weiding",
+  "private": true,
+  "scripts": {
+    "build:css": "sass scss/kidswedding-inline.scss css/kidswedding-inline.css --no-source-map",
+    "watch:css": "sass scss/kidswedding-inline.scss css/kidswedding-inline.css --watch"
+  },
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+}
