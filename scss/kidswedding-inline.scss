@@ -1,31 +1,31 @@
 // Цвета
 // Фон
 $bg-cream: #fff;
-$bg-cream-alt: #fdf9e3;
+$bg-cream-alt: #fff;
 $bg-white: #ffffff;
-$bg-olive: #b27595;
-$bg-olive-dark: #b27595;
-$bg-brown-light: #e7c5aa;
+$bg-olive: #bdb0d0;
+$bg-olive-dark: #bdb0d0;
+$bg-brown-light: #fff;
 $bg-brown: #8b5742;
 $bg-deep: #24232c;
 $bg-shadow-15: rgba(0, 0, 0, 0.15);
 $bg-shadow-40: rgba(0, 0, 0, 0.4);
-$bg-cream-35: rgba(253, 249, 226, 0.35);
-$bg-cream-70: rgba(253, 249, 226, 0.7);
+$bg-cream-35: rgba(#fff, 0.35);
+$bg-cream-70: rgba(#fff, 0.7);
 $bg-transparent: transparent;
 
 // Текст
-$text-base: #332c2f;
-$text-base-alt: #332c2e;
-$text-dark: #2c2d27;
-$text-olive-dark: #b27595;
-$text-olive-darker: #a23f72;
-$text-accent: #bdb0d0;
-$text-gold: #a23f72;
-$text-burgundy: #631b25;
-$text-cream: #fdf9e2;
-$text-cream-soft: #fefaf0;
-$text-cream-70: rgba(253, 249, 226, 0.7);
+$text-base: #494057;
+$text-base-alt: #494057;
+$text-dark: #494057;
+$text-olive-dark: #958aa5;
+$text-olive-darker: #807394;
+$text-accent: #a79bb8;
+$text-gold: #bdb0d0;
+$text-burgundy: #9e93af;
+$text-cream: #ffffff;
+$text-cream-soft: #ffffff;
+$text-cream-70: #ffffff;
 $text-black: #000000;
 $text-white: #ffffff;
 
@@ -178,42 +178,58 @@ li {
   object-fit: contain;
 }
 
-#preloader {
-  position: fixed;
-  inset: 0;
-  z-index: 99999;
-  background: $color-bg;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-#preloader.hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.preloader-heart {
-  width: 80px;
-  height: 74px;
-  animation: preloader-heart-pulse 0.8s ease-in-out infinite;
-}
-
-.preloader-heart path {
-  fill: $color-accent;
-}
-
-@keyframes preloader-heart-pulse {
-  0%, 100% {
+// ----- Preloader (как в test1) -----
+@keyframes preloader-pulse {
+  0%,
+  100% {
     transform: scale(1);
-    opacity: 1;
+    opacity: 0.7;
   }
   50% {
     transform: scale(1.15);
-    opacity: 0.85;
+    opacity: 1;
+  }
+}
+
+.preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-bg;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+
+  &--hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  &__inner {
+    text-align: center;
+  }
+
+  &__text {
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+    font-weight: 400;
+    color: $color-text;
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.02em;
+  }
+
+  &__heart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba($color-text, 0.8);
+
+    svg {
+      width: 40px;
+      height: 40px;
+      animation: preloader-pulse 1.2s ease-in-out infinite;
+    }
   }
 }
 
@@ -1129,7 +1145,7 @@ li {
 
 #rec1385403381 .tn-elem[data-elem-id="1759739286353"] .tn-atom  {
   color: $text-burgundy;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.05;
     background-size: cover;
 }
@@ -3946,7 +3962,9 @@ html { -webkit-text-size-adjust: 100%; }
     background-size: cover;
 }
 }
-
+#anketa {
+  height: 550px !important;
+}
 #rec1385503291 .tn-elem[data-elem-id="175950505174349250"]  {
   z-index: 3;
   top: 80px;
@@ -4439,6 +4457,136 @@ html { -webkit-text-size-adjust: 100%; }
     right: -4px;
     top: 4px;
   }
+}
+
+/* === HERO из test1 (замена tilda-hero на мобилке) === */
+#rec1385340331 .hero {
+  position: relative;
+  min-height: var(--hero-viewport-height, 100vh);
+  height: var(--hero-viewport-height, 100vh);
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#rec1385340331 .hero__image {
+  position: absolute;
+  inset: 0;
+}
+
+#rec1385340331 .hero__image-pic {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  z-index: 0;
+}
+
+#rec1385340331 .hero__image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.4) 100%);
+  z-index: 1;
+}
+
+#rec1385340331 .hero__overlay {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(3rem, 12vh, 5rem) 1.5rem clamp(3rem, 14vh, 5rem);
+  color: $text-white;
+}
+
+#rec1385340331 .hero__top {
+  text-align: center;
+}
+
+#rec1385340331 .hero__phrase {
+  font-family: Georgia !important;
+  font-size: clamp(2.5rem, 12vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+#rec1385340331 .hero__subphrase {
+  font-family: var(--font-main);
+  font-size: clamp(1.4rem, 5.5vw, 2rem);
+  font-weight: 400;
+  font-style: italic;
+  line-height: normal;
+  letter-spacing: 0.02em;
+  opacity: 0.98;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 3px rgba(0, 0, 0, 0.6);
+  padding-left: clamp(3rem, 8vw, 5rem);
+}
+
+#rec1385340331 .hero__bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#rec1385340331 .hero__main {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#rec1385340331 .hero__monogram {
+  font-family: 'rukopis', var(--font-main) !important;
+  font-size: clamp(3rem, 15vw, 5rem);
+  font-weight: 400;
+  line-height: 1;
+  flex-shrink: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6), 0 1px 4px rgba(0, 0, 0, 0.8);
+  letter-spacing: 0;
+}
+
+#rec1385340331 .hero__line {
+  width: 1px;
+  align-self: stretch;
+  min-height: 4rem;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+}
+
+#rec1385340331 .hero__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.15rem;
+}
+
+#rec1385340331 .hero__name {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: clamp(1.1rem, 4.5vw, 1.4rem);
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+#rec1385340331 .hero__date {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: clamp(0.85rem, 3.5vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: 0.98;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.8);
 }
 
 /* === INLINE STYLE BLOCK 13 === */
