@@ -50,7 +50,7 @@ li {
   height: 2px;
   width: clamp(260px, 70vw, 560px);
   margin: 26px auto 0;
-  background: #708238;
+  background: #b27595;
   opacity: 0.85;
   border-radius: 2px;
 }
@@ -127,7 +127,7 @@ li {
 }
 
 .preloader-heart path {
-  fill: #708238;
+  fill: #b27595;
 }
 
 @keyframes preloader-heart-pulse {
@@ -1330,7 +1330,7 @@ li {
     height: 423px;
   }
   #rec1432877881 .t396__artboard {
-    background-color: #708238;
+    background-color: #b27595;
   }
   #rec1432877881 .t396__carrier {
     background-attachment: scroll;
@@ -1544,7 +1544,7 @@ li {
   border-color: var(--t396-bordercolor, transparent);
   transition: background-color var(--t396-speedhover, 0s) ease-in-out, color var(--t396-speedhover, 0s) ease-in-out, border-color var(--t396-speedhover, 0s) ease-in-out, box-shadow var(--t396-shadowshoverspeed, 0.2s) ease-in-out;
   padding: 10px;
-  background-color: #fff;
+  background-color: #ffffff;
   box-sizing: border-box;
 }
 
@@ -2650,7 +2650,7 @@ html {
     height: 427px;
   }
   #rec1392696741 .t396__artboard {
-    background-color: #708238;
+    background-color: #b27595;
   }
   #rec1392696741 .t396__carrier {
     background-attachment: scroll;
@@ -3594,7 +3594,7 @@ html {
     height: 830px;
   }
   #rec1385503291 .t396__artboard {
-    background-color: #708238;
+    background-color: #b27595;
   }
   #rec1385503291 .t396__carrier {
     background-attachment: scroll;
@@ -3605,7 +3605,7 @@ html {
     height: 802px;
   }
   #rec1385503291 .t396__artboard {
-    background-color: #708238;
+    background-color: #b27595;
   }
   #rec1385503291 .t396__carrier {
     background-attachment: scroll;
@@ -3616,7 +3616,7 @@ html {
     height: 877px;
   }
   #rec1385503291 .t396__artboard {
-    background-color: #708238;
+    background-color: #b27595;
   }
   #rec1385503291 .t396__carrier {
     background-attachment: scroll;
@@ -3893,7 +3893,7 @@ html {
   border: none;
   border-radius: 20px;
   padding: 6px 16px;
-  background: #708238;
+  background: #b27595;
   color: #fdf9e2;
   font-family: cursive;
   font-size: 14px;
@@ -3971,7 +3971,7 @@ html {
   border-radius: 50%;
   object-fit: cover;
   object-position: center top;
-  background-color: #708238;
+  background-color: #b27595;
   margin-top: 10px;
 }
 
@@ -4064,7 +4064,7 @@ html {
 /* === INLINE STYLE BLOCK 13 === */
 #rec1392735971 .t396__artboard {
   height: 337px;
-  background-color: #708238;
+  background-color: #b27595;
 }
 
 #rec1392735971 .t396__filter {
@@ -4108,7 +4108,7 @@ html {
     height: 220px;
   }
   #rec1392735971 .t396__artboard {
-    background-color: #708238;
+    background-color: #b27595;
   }
   #rec1392735971 .t396__carrier {
     background-attachment: scroll;
