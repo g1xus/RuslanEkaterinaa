@@ -4,7 +4,7 @@ $bg-cream: #fdf9e2;
 $bg-cream-alt: #fdf9e3;
 $bg-white: #ffffff;
 $bg-olive: #b27595;
-$bg-olive-dark: #6b6a3a;
+$bg-olive-dark: #b27595;
 $bg-brown-light: #e7c5aa;
 $bg-brown: #8b5742;
 $bg-deep: #24232c;
@@ -18,9 +18,9 @@ $bg-transparent: transparent;
 $text-base: #332c2f;
 $text-base-alt: #332c2e;
 $text-dark: #2c2d27;
-$text-olive-dark: #4e5b25;
-$text-olive-darker: #455122;
-$text-accent: #708238;
+$text-olive-dark: #b27595;
+$text-olive-darker: #a23f72;
+$text-accent: #a23f72;
 $text-gold: #b49a58;
 $text-burgundy: #631b25;
 $text-cream: #fdf9e2;
@@ -4001,6 +4001,13 @@ html { -webkit-text-size-adjust: 100%; }
   color: $text-cream;
   font-size: 14px;
   outline: none;
+}
+
+#rec1385503291 textarea.guest-form__input {
+  min-height: 30px;
+  resize: vertical;
+  border-radius: 18px;
+  line-height: 1.35;
 }
 
 #rec1385503291 .guest-form__input::placeholder {
