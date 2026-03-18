@@ -1,10 +1,21 @@
 @charset "UTF-8";
 /* === ГЛОБАЛЬНЫЙ ШРИФТ === */
+:root {
+  --font-main: 'Cormorant Garamond', 'Times New Roman', serif;
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("fonts/CormorantGaramond-Me.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 :root,
 body,
 #allrecords {
-  --t-headline-font: 'Montserrat', Arial, sans-serif;
-  --t-text-font: 'Montserrat', Arial, sans-serif;
+  --t-headline-font: var(--font-main);
+  --t-text-font: var(--font-main);
 }
 
 body,
@@ -26,7 +37,13 @@ p,
 span,
 a,
 li {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: var(--font-main);
+}
+
+/* Гарантированно перебиваем тильдовские font-family в инлайнах/блоках */
+#allrecords,
+#allrecords * {
+  font-family: var(--font-main) !important;
 }
 
 /* === Рукописный амперсанд в hero === */
@@ -56,7 +73,7 @@ li {
 }
 
 .hero-name-main {
-  font-family: "Montserrat", Arial, sans-serif;
+  font-family: var(--font-main);
   font-weight: 300;
   display: block;
   text-align: center;
@@ -74,21 +91,22 @@ li {
 .hero-label {
   transform: none;
   font-size: 32px;
-  font-family: "rukopis", "Montserrat", Arial, sans-serif;
+  font-family: "rukopis", var(--font-main) !important;
   font-weight: 400;
 }
 
 .hero-name-amp {
   position: absolute;
-  right: 110px;
+  right: 120px;
   transform: translateY(-80%);
-  font-family: "rukopis", "Montserrat", Arial, sans-serif;
+  opacity: 0.8;
+  font-family: "rukopis", var(--font-main) !important;
   color: #a23f72;
 }
 
 .hero-rings {
   position: absolute;
-  left: 80px;
+  left: 60px;
   transform: translateY(10%);
   width: 58px;
   height: 44px;
