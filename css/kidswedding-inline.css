@@ -53,6 +53,14 @@ li {
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jD-hdM8Efs.woff2) format("woff2");
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
 /* === GLOBAL CUSTOM STYLES FROM index.html === */
 .hero-names {
   position: relative;
@@ -90,9 +98,13 @@ li {
 
 .hero-label {
   transform: none;
-  font-size: 32px;
+  font-size: 40px;
   font-family: "rukopis", var(--font-main) !important;
   font-weight: 400;
+}
+
+#hero-label {
+  font-family: "Georgia" !important;
 }
 
 .hero-name-amp {
@@ -124,7 +136,7 @@ li {
   position: fixed;
   inset: 0;
   z-index: 99999;
-  background: #fdf9e2;
+  background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -179,7 +191,7 @@ li {
   font-style: normal;
   font-size: 12px;
   line-height: 1.1;
-  color: #a23f72;
+  color: #bdb0d0;
   text-align: center;
   white-space: normal;
 }
@@ -193,7 +205,7 @@ li {
   font-style: normal;
   font-size: 12px;
   line-height: 1.1;
-  color: #a23f72;
+  color: #bdb0d0;
   text-align: center;
   white-space: normal;
   transform: rotate(-15deg);
@@ -203,7 +215,7 @@ li {
 #rec1394235481 .t396__artboard {
   min-height: 550px;
   height: 100vh;
-  background-color: #fdf9e2;
+  background-color: #fff;
 }
 
 #rec1394235481 .t396__filter {
@@ -375,7 +387,7 @@ li {
 /* === INLINE STYLE BLOCK 2 === */
 #rec1385340331 .t396__artboard {
   height: 559px;
-  background-color: #fdf9e2;
+  background-color: #fff;
 }
 
 #rec1385340331 .t396__filter {
@@ -527,7 +539,7 @@ li {
   }
 }
 #rec1385340331 .tn-elem[data-elem-id="1759501609482"] {
-  color: #a23f72;
+  color: #bdb0d0;
   text-align: CENTER;
   z-index: 3;
   top: 100px;
@@ -538,7 +550,7 @@ li {
 
 #rec1385340331 .tn-elem[data-elem-id="1759501609482"] .tn-atom {
   vertical-align: middle;
-  color: #a23f72;
+  color: #bdb0d0;
   font-size: 32px;
   font-family: "Montserrat", Arial, sans-serif;
   line-height: 1;
@@ -886,7 +898,7 @@ li {
 /* === INLINE STYLE BLOCK 5 === */
 #rec1385403381 .t396__artboard {
   height: 620px;
-  background-color: #fdf9e2;
+  background-color: #fff;
 }
 
 #rec1385403381 .t396__filter {
@@ -1009,7 +1021,7 @@ li {
   }
 }
 #rec1385403381 .tn-elem[data-elem-id="175950412650313600"] {
-  color: #a23f72;
+  color: #bdb0d0;
   text-align: center;
   z-index: 15 !important;
   position: relative;
@@ -1024,7 +1036,7 @@ li {
 
 #rec1385403381 .tn-elem[data-elem-id="175950412650313600"] .tn-atom {
   vertical-align: middle;
-  color: #a23f72;
+  color: #bdb0d0;
   font-size: 32px;
   font-family: "Montserrat", Arial, sans-serif;
   line-height: 1;
@@ -1304,7 +1316,7 @@ li {
 /* === INLINE STYLE BLOCK 6 === */
 #rec1432877881 .t396__artboard {
   height: 492px;
-  background-color: #fdf9e2;
+  background-color: #fff;
 }
 
 #rec1432877881 .t396__filter {
@@ -1662,7 +1674,7 @@ li {
 /* === INLINE STYLE BLOCK 7 === */
 #rec1392600911 .t396__artboard {
   height: 693px;
-  background-color: #fdf9e2;
+  background-color: #fff;
 }
 
 #rec1392600911 .t396__filter {
@@ -2624,7 +2636,7 @@ html {
 /* === INLINE STYLE BLOCK 8 === */
 #rec1392696741 .t396__artboard {
   height: 374px;
-  background-color: #fdf9e2;
+  background-color: #fff;
 }
 
 #rec1392696741 .t396__filter {
@@ -3248,7 +3260,7 @@ html {
 /* === INLINE STYLE BLOCK 9 === */
 #rec1392709671 .t396__artboard {
   height: 521px;
-  background-color: #fdf9e2;
+  background-color: #fff;
 }
 
 #rec1392709671 .t396__filter {
@@ -3584,7 +3596,7 @@ html {
 /* === INLINE STYLE BLOCK 10 === */
 #rec1385503291 .t396__artboard {
   height: 830px;
-  background-color: #fdf9e2;
+  background-color: #fff;
 }
 
 #rec1385503291 .t396__filter {
@@ -3854,8 +3866,8 @@ html {
 
 #rec1385503291 .guest-form__option input[type=radio]:checked + span::before,
 #rec1385503291 .guest-form__option input[type=checkbox]:checked + span::before {
-  background-color: #fdf9e2;
-  border-color: #fdf9e2;
+  background-color: #fff;
+  border-color: #fff;
   box-shadow: 0 0 0 2px rgba(253, 249, 226, 0.35);
 }
 
@@ -3898,7 +3910,7 @@ html {
 }
 
 #rec1385503291 .guest-form-popup__inner {
-  background: #fdf9e2;
+  background: #fff;
   color: #631b25;
   padding: 20px 24px;
   border-radius: 16px;
@@ -3940,7 +3952,7 @@ html {
 /* === Организатор свадьбы === */
 #rec1392735969 .t396__artboard {
   height: 440px;
-  background-color: #fdf9e2;
+  background-color: #fff;
 }
 
 #rec1392735969 .t396__filter {

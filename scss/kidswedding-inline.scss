@@ -1,6 +1,6 @@
 // Цвета
 // Фон
-$bg-cream: #fdf9e2;
+$bg-cream: #fff;
 $bg-cream-alt: #fdf9e3;
 $bg-white: #ffffff;
 $bg-olive: #b27595;
@@ -20,7 +20,7 @@ $text-base-alt: #332c2e;
 $text-dark: #2c2d27;
 $text-olive-dark: #b27595;
 $text-olive-darker: #a23f72;
-$text-accent: #a23f72;
+$text-accent: #bdb0d0;
 $text-gold: #a23f72;
 $text-burgundy: #631b25;
 $text-cream: #fdf9e2;
@@ -96,6 +96,15 @@ li {
   font-weight: 400;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jD-hdM8Efs.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+
 
 /* === GLOBAL CUSTOM STYLES FROM index.html === */
 
@@ -135,9 +144,13 @@ li {
 
 .hero-label {
   transform: none;
-  font-size: 32px;
-  font-family: 'rukopis', var(--font-main) !important;
+  font-size: 40px;
+  font-family:  'rukopis', var(--font-main) !important;
   font-weight: 400;
+}
+
+#hero-label {
+  font-family: 'Georgia' !important;
 }
 
 .hero-name-amp {
