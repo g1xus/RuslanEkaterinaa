@@ -4088,25 +4088,62 @@ html {
 
 /* === INLINE STYLE BLOCK 13 === */
 #rec1392735971 .t396__artboard {
-  height: 337px;
+  height: 597px;
   background-color: #b27595;
 }
 
 #rec1392735971 .t396__filter {
-  height: 337px;
+  height: 597px;
 }
 
 #rec1392735971 .t396__carrier {
-  height: 337px;
+  height: 597px;
   background-position: center center;
   background-attachment: scroll;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
+/* Финальный блок — нижняя картинка (footer.png) */
+#rec1392735971 .t396__artboard {
+  position: relative;
+  overflow: hidden;
+}
+
+#rec1392735971 .final-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 260px;
+  z-index: 1;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+#rec1392735971 .final-footer img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+@media screen and (max-width: 639px) {
+  #rec1392735971 .final-footer {
+    height: 240px;
+  }
+}
+@media screen and (max-width: 479px) {
+  #rec1392735971 .final-footer {
+    height: 170px;
+  }
+}
 @media screen and (max-width: 1199px) {
   #rec1392735971 .t396__artboard, #rec1392735971 .t396__filter, #rec1392735971 .t396__carrier {
-    height: 337px;
+    height: 597px;
   }
   #rec1392735971 .t396__carrier {
     background-attachment: scroll;
@@ -4114,7 +4151,7 @@ html {
 }
 @media screen and (max-width: 959px) {
   #rec1392735971 .t396__artboard, #rec1392735971 .t396__filter, #rec1392735971 .t396__carrier {
-    height: 330px;
+    height: 590px;
   }
   #rec1392735971 .t396__carrier {
     background-attachment: scroll;
@@ -4122,7 +4159,7 @@ html {
 }
 @media screen and (max-width: 639px) {
   #rec1392735971 .t396__artboard, #rec1392735971 .t396__filter, #rec1392735971 .t396__carrier {
-    height: 324px;
+    height: 564px;
   }
   #rec1392735971 .t396__carrier {
     background-attachment: scroll;
@@ -4130,7 +4167,7 @@ html {
 }
 @media screen and (max-width: 479px) {
   #rec1392735971 .t396__artboard, #rec1392735971 .t396__filter, #rec1392735971 .t396__carrier {
-    height: 220px;
+    height: 390px;
   }
   #rec1392735971 .t396__artboard {
     background-color: #b27595;
