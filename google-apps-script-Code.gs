@@ -12,6 +12,7 @@ function doPost(e) {
   var drinks = params['напитки'] || '';
   var allergies = params['аллергии'] || '';
   var hot = params['горячее'] || '';
+  var funFact = params['интересный факт'] || '';
 
   sheet.appendRow([
     new Date(),
@@ -19,7 +20,8 @@ function doPost(e) {
     presence,
     drinks,
     allergies,
-    hot
+    hot,
+    funFact
   ]);
 
   return ContentService
