@@ -42,7 +42,7 @@ $breakpoint-479: 479px;
 /* === ГЛОБАЛЬНЫЙ ШРИФТ === */
 
 :root {
-  --font-main: 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-main: 'Montserrat', 'Times New Roman', serif;
 }
 
 @font-face {
@@ -1135,7 +1135,7 @@ li {
 @media screen and (max-width: 479px)  {
   #rec1385403381 .tn-elem[data-elem-id="1759739286353"]  {
   display: table;
-    top: 16px !important;
+    top: 14px !important;
     left: calc(50% - 160px + 10px) !important;
     width: 300px;
     height: auto;
@@ -1145,7 +1145,7 @@ li {
 
 #rec1385403381 .tn-elem[data-elem-id="1759739286353"] .tn-atom  {
   color: $text-burgundy;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.05;
     background-size: cover;
 }
@@ -1159,7 +1159,7 @@ li {
   position: relative;
   opacity: 1 !important;
   visibility: visible !important;
-  top: 142px !important;
+  top: 166px !important;
   left: 50% !important;
   margin-left: -182px; /* половина width 365px */
   width: 365px;
@@ -1681,7 +1681,7 @@ li {
 #rec1432877881 .tn-elem[data-elem-id="1759740347570"] .tn-atom  {
   vertical-align: middle;
   color: $text-base;
-  font-size: 20px;
+  font-size: 18px;
   font-family: "Montserrat", Arial, sans-serif;
   line-height: 1;
   font-weight: 600;
@@ -1730,7 +1730,7 @@ li {
 
 #rec1432877881 .tn-elem[data-elem-id="1759740347570"] .tn-atom  {
   color: $text-cream;
-    font-size: 20px;
+    font-size: 18px;
     background-size: cover;
 }
 }
